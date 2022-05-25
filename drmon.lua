@@ -158,7 +158,7 @@ function drawButtons(y)
   f.draw_text(mon, 21, y, ">> ", colors.white, colors.gray)
   f.draw_text(mon, 25, y, " > ", colors.white, colors.gray)
 end
-
+print(monitor)
 local currTerm = monitor.current()
 local window = window.create(currTerm, 1, 1, monX, monY, false)
 
