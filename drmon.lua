@@ -159,13 +159,13 @@ function drawButtons(y)
   f.draw_text(mon, 25, y, " > ", colors.white, colors.gray)
 end
 
-local currTerm = mon.monitor.current()
+local currTerm = monitor.current()
 local window = window.create(currTerm, 1, 1, monX, monY, false)
 
 
 function update()
   while true do 
-    mon.monitor.redirect(window)
+    monitor.redirect(window)
 
     f.clear(mon)
 
@@ -311,7 +311,7 @@ function update()
       action = "Temp > " .. maxTemperature
       emergencyTemp = true
     end
-    mon.monitor.redirect(currTerm)
+    monitor.redirect(currTerm)
 
     window.setVisible(true)
     window.setVisible(false)
